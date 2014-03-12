@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wizard News</title>
+</head>
+<body>
+
+<a href="/createarticle"> Submit a link</a>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+    <%= "#{article.title} | "%>
+    <a href = "<%="#{article.url}"%>"> Link </a>
+    <%= " | #{article.description}" %>
+
+    </li>
+    <% end %>
+</ul>
+</body>
+</html>
+
+
+
+
+<!-- <form action="/articles" method="post">
+  <div>
+    <label for="title">Article Name</label>
+    <input type="text" id="title" name="title" />
+  </div>
+
+  <div>
+    <label for="url">URL</label>
+    <input type="text" id="url" name="url" />
+  </div>
+
+  <div>
+    <label for="description">Description</label>
+    <input type="text" id="description" name="description" />
+  </div>
+
+
+  <input type="submit" />
+</form> -->
