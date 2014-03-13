@@ -17,10 +17,5 @@ end
     @description
   end
 
-  def write_to_csv(file)
-    CSV.open(file) do row
-      row << ['title', 'url', 'description']
-    end
-  end
 
 end
